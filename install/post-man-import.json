@@ -1,0 +1,215 @@
+{
+  "info": {
+    "_postman_id": "d97f34e1-d191-42fb-9c0f-e5c50d70ec52",
+    "name": "Api Yapı",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "24395951"
+  },
+  "item": [
+    {
+      "name": "Affiliate",
+      "item": [
+        {
+          "name": "Register Wallet",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "type",
+                  "value": "affiliate_wallet",
+                  "description": "// TYPE",
+                  "type": "text"
+                },
+                {
+                  "key": "address",
+                  "value": "0x038C463D7c36aAD3c5DD1ceC103E6D972EbDAA1Ess",
+                  "description": "// WALLET ADDRESS",
+                  "type": "text"
+                },
+                {
+                  "key": "incoming",
+                  "value": "yVbm14BjLTqiz3r",
+                  "description": "// GET REFFERANCE",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost/NEW%20PROJECT/post.php",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "NEW%20PROJECT",
+                "post.php"
+              ],
+              "query": [
+                {
+                  "key": "type",
+                  "value": "affiliate_wallet",
+                  "disabled": true
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Add Referance Code",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "type",
+                  "value": "add_referance",
+                  "description": "// TYPE",
+                  "type": "text"
+                },
+                {
+                  "key": "address",
+                  "value": "0x0a8F41Cb67f89488AE9758a945BD0f1CDcD3535c",
+                  "description": "// WALLET ADDRESS",
+                  "type": "text"
+                },
+                {
+                  "key": "referance",
+                  "value": "lr4hPUXpg3HtWGk",
+                  "description": "// GET REFFERANCE",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost/NEW%20PROJECT/post.php",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "NEW%20PROJECT",
+                "post.php"
+              ],
+              "query": [
+                {
+                  "key": "type",
+                  "value": "affiliate_wallet",
+                  "disabled": true
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Wallet Result",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "type",
+                  "value": "affiliate_wallet",
+                  "description": "// TYPE",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "address",
+                  "value": "0x0a8F41Cb67f89488AE9758a945BD0f1CDcD3535c",
+                  "description": "// WALLET ADDRESS",
+                  "type": "text",
+                  "disabled": true
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost/NEW%20PROJECT/select.php?type=wallet&address=0x0a8F41Cb67f89488AE9758a945BD0f1CDcD3535c",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "NEW%20PROJECT",
+                "select.php"
+              ],
+              "query": [
+                {
+                  "key": "type",
+                  "value": "wallet",
+                  "description": "// GET TYPE"
+                },
+                {
+                  "key": "address",
+                  "value": "0x0a8F41Cb67f89488AE9758a945BD0f1CDcD3535c",
+                  "description": "// RESULT WALLET"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Welcome",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "type",
+              "value": "welcome",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost/NEW%20PROJECT/post.php",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "path": [
+            "NEW%20PROJECT",
+            "post.php"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Table",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost/NEW%20PROJECT/install/table.php",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "path": [
+            "NEW%20PROJECT",
+            "install",
+            "table.php"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
